@@ -28,8 +28,8 @@ userNameBtn.addEventListener("click", function(){
         let x = localStorage.getItem("user")
         document.querySelector(".user-name").textContent = x
         document.querySelector(".head1").classList.add("none")
-        document.querySelector(".head2").classList.add("none")
-        document.querySelector(".head3").classList.remove("none")
+        document.querySelector(".head2").classList.remove("none")
+        document.querySelector(".head3").classList.add("none")
         botStart.classList.remove("none")
     } 
 })
@@ -37,6 +37,13 @@ userNameBtn.addEventListener("click", function(){
 botStart.addEventListener("click", function(){
     botStart.classList.add("none")
     botActive.classList.remove("none")
+    document.querySelector(".head1").classList.add("none")
+    document.querySelector(".head2").classList.add("none")
+    document.querySelector(".head3").classList.remove("none")
+    let x = localStorage.getItem("user")
+    y.forEach(function(name){
+        name.textContent = x;
+    })
 })
 let x = localStorage.getItem("user")
 var y = document.querySelectorAll('.user-name');
