@@ -1,3 +1,5 @@
+//Basic Bot structure
+
 localStorage.getItem("user")
 const botStart = document.querySelector(".bot-start")
 const botActive = document.querySelector(".bot-active")
@@ -50,3 +52,17 @@ var y = document.querySelectorAll('.user-name');
 y.forEach(function(name){
     name.textContent = x;
 });
+
+//menu Goes Brrr...
+const menuBtn = document.querySelector(".menu-btn")
+const closeBtn = document.querySelector(".close-btn")
+const menuList = document.querySelector(".menu")
+
+menuBtn.addEventListener("click", function(){
+    menuList.classList.remove("none")
+    menuBtn.classList.add("none")
+})
+closeBtn.addEventListener("click", function(){
+    menuList.classList.add("none")
+    menuBtn.classList.remove("none")
+})
